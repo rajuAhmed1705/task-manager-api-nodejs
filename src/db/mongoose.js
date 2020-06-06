@@ -1,14 +1,12 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',{
-    useNewUrlParser:true,
-    useCreateIndex:true
-})
-
-
-
-
-
+mongoose.connect("mongodb://127.0.0.1:27017/task-manager-api", {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+  useUnifiedTopology: true,
+  // autoIndex: true
+});
 
 // const task = new Task({
 //     description:'complete this node course',
@@ -17,8 +15,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',{
 
 // task.save().then(() => {
 //     console.log(task);
-    
+
 // }).catch((error) => {
 //     console.log(error);
-    
+
 // })
